@@ -1,4 +1,5 @@
 # Nova CSV Cleaning Pipeline
+Here is a link to demo video: [![Nova Demo Video](https://img.youtube.com/vi/0U9Ev0XFJLc/hqdefault.jpg)](https://youtu.be/0U9Ev0XFJLc)
 
 An API that takes a messy CSV (as a string), scans it, has an AI write pandas cleaning code, runs that code in a subprocess, re-scans the result, and repeats until the data is clean. Progress, reports, and generated code are streamed live over Server-Sent Events (SSE).
 
