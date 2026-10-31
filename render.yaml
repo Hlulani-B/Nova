@@ -12,19 +12,7 @@ services:
         source: /*
         destination: /index.html
 
-  # 2. Scan Service (FastAPI) - Free Web Service
-  - type: web
-    name: nova-scan-service
-    env: python
-    plan: free
-    rootDir: scan
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
-      - key: GROQ_API_KEY
-        sync: false
+  
 
   # 3. Scrubber Service (FastAPI) - Free Web Service
   - type: web
@@ -40,16 +28,4 @@ services:
       - key: GROQ_API_KEY
         sync: false
 
-  # 4. Subprocess Service (FastAPI) - Free Web Service
-  - type: web
-    name: nova-subprocess-service
-    env: python
-    plan: free
-    rootDir: subprocess
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
-      - key: GROQ_API_KEY
-        sync: false
+  
