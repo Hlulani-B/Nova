@@ -1,5 +1,5 @@
 from testcases import long_python_challenges 
-from main import run_python_code
+from subprocess import run_python_code
 
 def run_tests():
     print("🚀 Starting Challenge Test Suite...\n")
